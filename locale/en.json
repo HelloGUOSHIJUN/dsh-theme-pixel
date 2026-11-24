@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Pixel theme",
+    "description": "Repaints the Web UI in a pixel-interface style: square corners, hard unblurred shadows, chunky bevels and a monospace face. Ships light and dark.",
+    "detail": "docs/DETAIL.md"
+  }
+}

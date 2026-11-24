@@ -1,0 +1,57 @@
+{
+  "name": "dsh-theme-pixel",
+  "version": "1.0.0",
+  "description": "把 DeepSeek Harness 的 Web 界面换成像素界面风：直角框线、无模糊硬投影、等宽字体，像一台老式窗口管理器。",
+  "type": "module",
+  "license": "MIT",
+  "author": "HelloGUOSHIJUN",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "theme",
+    "pixel",
+    "retro",
+    "pixel-art"
+  ],
+  "homepage": "https://github.com/HelloGUOSHIJUN/dsh-theme-pixel#readme",
+  "bugs": {
+    "url": "https://github.com/HelloGUOSHIJUN/dsh-theme-pixel/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "theme.css",
+    "scripts/*.mjs",
+    "locale/*.json",
+    "docs/*.md",
+    "icon.svg",
+    "LICENSE",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "prepack": "node scripts/build.mjs && node scripts/check.mjs"
+  }
+}
